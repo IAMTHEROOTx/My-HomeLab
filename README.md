@@ -1,6 +1,7 @@
 # 🔧 Mise en place d’un serveur Ubuntu sans fil (Wi-Fi)
 
 > 🖥️ **Objectif** : Connecter un serveur Ubuntu (22.04+, `noble`) à un réseau Wi-Fi **sans accès initial à Internet**, configurer **SSH** pour le contrôler à distance, et **automatiser la reconnexion au démarrage**.
+![Mise en place d’un serveur Uunbtu sans fil avec accès SSH](https://github.com/user-attachments/assets/02a7a473-c8b5-4de7-bb71-089c31e4fecb)
 
 ---
 
