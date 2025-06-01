@@ -122,9 +122,6 @@ Créer le fichier de configuration :
 sudo nano /etc/wpa_supplicant.conf
 Contenu :
 
-conf
-Copier
-Modifier
 ctrl_interface=DIR=/run/wpa_supplicant GROUP=netdev
 network={
   ssid="NomDuReseauWiFi"
@@ -140,8 +137,6 @@ sudo dhclient wlp0s12f0
 ```
 Vérification :
 ```bash
-Copier
-Modifier
 ping google.com
 ```
 3. SSH (connexion distante)
@@ -170,9 +165,7 @@ ssh nom_utilisateur@ip_du_serveur
 Créer deux services systemd.
 
 /etc/systemd/system/wifi-auto.service
-ini
-Copier
-Modifier
+
 [Unit]
 Description=Auto connect to WiFi
 After=network.target
@@ -184,8 +177,7 @@ ExecStart=/sbin/wpa_supplicant -B -i wlp0s12f0 -c /etc/wpa_supplicant.conf
 WantedBy=multi-user.target
 /etc/systemd/system/dhclient-wifi.service
 ini
-Copier
-Modifier
+
 [Unit]
 Description=DHCP client for WiFi
 After=wifi-auto.service
@@ -217,7 +209,6 @@ Trafic réseau live	sudo iftop -i wlp0s12f0
 ```bash
 Activer SSH au démarrage :
 
-Modifier
 sudo systemctl enable ssh
 ```
 Configurer le pare-feu :
