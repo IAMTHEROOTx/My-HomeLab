@@ -123,7 +123,7 @@ sudo dpkg -i /mnt/usb/isc-dhcp-client_4.4.3-P1-4ubuntu2_amd64.deb
 sudo dpkg -i /mnt/usb/isc-dhcp-common_4.4.3-P1-4ubuntu2_amd64.deb
 ```
 
-2. Connexion Wi-Fi manuelle
+### 2. Connexion Wi-Fi manuelle
 Créer le fichier de configuration :
 
 ```bash
@@ -154,7 +154,7 @@ Si vous parvenez a reach google.com vous etes connecté.
 ip a
 ```
 
-3. SSH (connexion distante)
+### 3. SSH (connexion distante)
 
 Installation :
 
