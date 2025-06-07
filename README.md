@@ -178,15 +178,15 @@ ssh nom_utilisateur@ip_du_serveur
 
 ## Commandes utiles
 ```bash
-| Action                    | Commande                    | Description                                      |
-|---------------------------|-----------------------------|--------------------------------------------------|
-| Redémarrer le système     | `sudo reboot`               | Redémarre immédiatement le système               |
-| Éteindre le système       | `sudo poweroff`             | Éteint complètement l'ordinateur                 |
-| Mettre en veille (suspend)| `systemctl suspend`         | Mode veille (RAM active)                         |
-| Hiberner le système       | `systemctl hibernate`       | Hibernation (sauvegarde de la RAM)              |
-| Vérifier l'état du Wi-Fi  | `iwconfig wlan0`            | Affiche l’état de l’interface Wi-Fi              |
-| Afficher l'adresse IP     | `ip a show wlan0`           | Affiche l’adresse IP de l’interface wlan0        |
-| Trafic réseau en temps réel | `sudo iftop -i wlan0`     | Surveille le trafic réseau en direct             |
+| Action                      | Commande                    | Description                                      |
+|-----------------------------|-----------------------------|--------------------------------------------------|
+| Redémarrer le système       | `sudo reboot`               | Redémarre immédiatement le système               |
+| Éteindre le système         | `sudo poweroff`             | Éteint complètement l'ordinateur                 |
+| Mettre en veille (suspend)  | `systemctl suspend`         | Mode veille (RAM active)                         |
+| Hiberner le système         | `systemctl hibernate`       | Hibernation (sauvegarde de la RAM)               |
+| Vérifier l'état du Wi-Fi    | `iwconfig wlan0`            | Affiche l’état de l’interface Wi-Fi              |
+| Afficher l'adresse IP       | `ip a show wlan0`           | Affiche l’adresse IP de l’interface wlan0        |
+| Trafic réseau en temps réel | `sudo iftop -i wlan0`       | Surveille le trafic réseau en direct             |
 
 
 ```
