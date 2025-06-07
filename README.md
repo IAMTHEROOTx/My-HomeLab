@@ -195,12 +195,15 @@ ssh nom_utilisateur@ip_du_serveur
 | Trafic réseau en temps réel | sudo iftop -i wlan0         | Surveille le trafic réseau en direct             |
 
 J'ai aussi écrit un petit script bash pour se connecter au wifi manuellement, au lieu de reecrire toutes les commandes à la main.
+
 **Pour le lancer**
+
+![Script WIFI](UbuntuServer/WIFI-Manuel.sh).
 ```bash
 chmod +x WIFI-Manuel.sh
 ./WIFI-Manuel.sh
 ```
-![Script WIFI](UbuntuServer/WIFI-Manuel.sh).
+
 
 ## Fiabilisation
 ```bash
