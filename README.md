@@ -177,7 +177,7 @@ ssh nom_utilisateur@ip_du_serveur
 ```
 
 ## Commandes utiles
-```bash
+
 | Action                      | Commande                    | Description                                      |
 |-----------------------------|-----------------------------|--------------------------------------------------|
 | Redémarrer le système       | sudo reboot                 | Redémarre immédiatement le système               |
@@ -189,7 +189,6 @@ ssh nom_utilisateur@ip_du_serveur
 | Trafic réseau en temps réel | sudo iftop -i wlan0         | Surveille le trafic réseau en direct             |
 
 
-```
 ## 🛠️ Fiabilisation
 ```bash
 Activer SSH au démarrage :
