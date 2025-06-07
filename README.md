@@ -244,3 +244,7 @@ Problèmes rencontrés :
 Résultat : connexion stable, accès SSH, reconnexion automatique
 
 ## illustrations-à-ajouter
+
+![Mise en place d’un serveur Uunbtu sans fil avec accès SSH](IMG_0639.jpg)
+![Mise en place d’un serveur Uunbtu sans fil avec accès SSH](IMG_0641.jpg)
+![Mise en place d’un serveur Uunbtu sans fil avec accès SSH](IMG_0642.jpg)
