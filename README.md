@@ -7,17 +7,17 @@
 
 ## 📜 Sommaire
 
-- [Présentation du projet](#🧾présentation-du-projet)
-- [Pré-requis](#📦Pré-requis)
-- [Étapes détaillées](#Étapesdétaillées)
+- [Présentation du projet](#présentation-du-projet)
+- [Pré-requis](#pré-requis)
+- [Étapes détaillées](#étapes-détaillées)
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
   - [2. Connexion Wi-Fi manuelle](#2-connexion-wi-fi-manuelle)
   - [3. SSH (connexion distante)](#3-ssh-connexion-distante)
-- [Commandes utiles](#🧰-commandes-utiles)
-- [Fiabilisation](#🛠️-fiabilisation)
-- [Annexes : IP statique avec Netplan](#📎-annexes--ip-statique-avec-netplan)
-- [Crédits & Contexte](#🧠-crédits--contexte)
-- [Illustrations (à ajouter)](#📸-illustrations-à-ajouter)
+- [Commandes utiles](#commandes-utiles)
+- [Fiabilisation](#fiabilisation)
+- [Annexes : IP statique avec Netplan](#annexes--ip-statique-avec-netplan)
+- [Crédits & Contexte](#crédits--contexte)
+- [Illustrations (à ajouter)](#illustrations-à-ajouter)
 
 ---
 
