@@ -7,9 +7,9 @@
 
 ## 📜 Sommaire
 
-- [Présentation du projet](#🧾-présentation-du-projet)
-- [Pré-requis](#📦-pré-requis)
-- [Étapes détaillées](#🔌-étapes-détaillées)
+- [Présentation du projet](#🧾présentation-du-projet)
+- [Pré-requis](#📦Pré-requis)
+- [Étapes détaillées](#Étapesdétaillées)
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
   - [2. Connexion Wi-Fi manuelle](#2-connexion-wi-fi-manuelle)
   - [3. SSH (connexion distante)](#3-ssh-connexion-distante)
@@ -37,7 +37,7 @@ Ce projet documente la configuration d’un **serveur Ubuntu sans interface grap
 
 ---
 
-## 🔌 Étapes détaillées
+## Étapes détaillées
 
 ### 1. Préparation réseau minimale
 
