@@ -7,7 +7,7 @@
 
 ## 📜 Sommaire
 
-- [Présentation du projet](#présentation-du-projet)
+- [Présentation du projet](#présentation--du--projet)
 - [Pré-requis](#pré-requis)
 - [Étapes détaillées](#étapes-détaillées)
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
