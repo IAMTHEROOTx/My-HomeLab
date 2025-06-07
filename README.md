@@ -13,7 +13,6 @@
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
   - [2. Connexion Wi-Fi manuelle](#2-connexion-wi-fi-manuelle)
   - [3. SSH (connexion distante)](#3-ssh-connexion-distante)
-  - [4. Automatiser la connexion Wi-Fi au démarrage](#4-automatiser-la-connexion-wi-fi-au-démarrage)
 - [Commandes utiles](#🧰-commandes-utiles)
 - [Fiabilisation](#🛠️-fiabilisation)
 - [Annexes : IP statique avec Netplan](#📎-annexes--ip-statique-avec-netplan)
@@ -115,6 +114,15 @@ libiw30_30~pre9-13.1ubuntu3_amd64.deb
 sudo dpkg -i /mnt/usb/wireless-tools_30~pre9-13.1ubuntu3_amd64.deb
 ```
 
+Puis répéter cette opération pour tous packets qui doit etre installées.
+
+```bash
+sudo dpkg -i /mnt/usb/wpasupplicant_2.10-15_amd64.deb
+sudo dpkg -i /mnt/usb/rfkill_2.39.3-9ubuntu6_amd64.deb
+sudo dpkg -i /mnt/usb/isc-dhcp-client_4.4.3-P1-4ubuntu2_amd64.deb
+sudo dpkg -i /mnt/usb/isc-dhcp-common_4.4.3-P1-4ubuntu2_amd64.deb
+```
+
 2. Connexion Wi-Fi manuelle
 Créer le fichier de configuration :
 
@@ -131,14 +139,21 @@ network={
 Connexion manuelle :
 
 ```bash
-sudo ip link set wlp0s12f0 up
-sudo wpa_supplicant -B -i wlp0s12f0 -c /etc/wpa_supplicant.conf
-sudo dhclient wlp0s12f0
+sudo ip link set wlan0 up
+sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+sudo dhclient wlan0
 ```
 Vérification :
 ```bash
 ping google.com
 ```
+Si vous parvenez a reach google.com vous etes connecté.
+
+**Maintenant pour connaitre l'adresse Ip de votre Ubuntu Server**
+```bash
+ip a
+```
+
 3. SSH (connexion distante)
 
 Installation :
@@ -160,52 +175,22 @@ Connexion depuis un autre PC :
 
 ssh nom_utilisateur@ip_du_serveur
 ```
-4. Automatiser la connexion Wi-Fi au démarrage
+
+## 🧰 Commandes utiles
 ```bash
-Créer deux services systemd.
+| Action                    | Commande                    | Description                                      |
+|---------------------------|-----------------------------|--------------------------------------------------|
+| Redémarrer le système     | `sudo reboot`               | Redémarre immédiatement le système               |
+| Éteindre le système       | `sudo poweroff`             | Éteint complètement l'ordinateur                 |
+| Mettre en veille (suspend)| `systemctl suspend`         | Mode veille (RAM active)                         |
+| Hiberner le système       | `systemctl hibernate`       | Hibernation (sauvegarde de la RAM)              |
+| Vérifier l'état du Wi-Fi  | `iwconfig wlan0`            | Affiche l’état de l’interface Wi-Fi              |
+| Afficher l'adresse IP     | `ip a show wlan0`           | Affiche l’adresse IP de l’interface wlan0        |
+| Trafic réseau en temps réel | `sudo iftop -i wlan0`     | Surveille le trafic réseau en direct             |
 
-/etc/systemd/system/wifi-auto.service
 
-[Unit]
-Description=Auto connect to WiFi
-After=network.target
-
-[Service]
-ExecStart=/sbin/wpa_supplicant -B -i wlp0s12f0 -c /etc/wpa_supplicant.conf
-
-[Install]
-WantedBy=multi-user.target
-/etc/systemd/system/dhclient-wifi.service
-ini
-
-[Unit]
-Description=DHCP client for WiFi
-After=wifi-auto.service
-
-[Service]
-ExecStart=/sbin/dhclient wlp0s12f0
-
-[Install]
-WantedBy=multi-user.target
 ```
-Activer au démarrage :
-
-```bash
-sudo systemctl enable wifi-auto.service
-sudo systemctl enable dhclient-wifi.service
-```
-🧰 Commandes utiles
-```bash
-Action	    Commande
-Redémarrer	sudo reboot
-Éteindre	sudo poweroff
-Suspendre	systemctl suspend
-Hiberner	systemctl hibernate
-Statut du Wi-Fi	iwconfig wlp0s12f0
-IP du serveur	ip a show wlp0s12f0
-Trafic réseau live	sudo iftop -i wlp0s12f0
-```
-🛠️ Fiabilisation
+## 🛠️ Fiabilisation
 ```bash
 Activer SSH au démarrage :
 
@@ -222,7 +207,7 @@ Réserver une IP statique dans la box/routeur
 
 Ou configurer une IP fixe via Netplan (voir section suivante)
 
-📎 Annexes : IP statique avec Netplan
+## Annexes : IP statique avec Netplan
 Modifier ou créer un fichier Netplan :
 
 ```yaml
@@ -230,7 +215,7 @@ network:
   version: 2
   renderer: networkd
   wifis:
-    wlp0s12f0:
+    wlan0:
       dhcp4: no
       addresses: [192.168.1.42/24]
       gateway4: 192.168.1.1
@@ -245,7 +230,7 @@ Appliquer la configuration :
 ```bash
 sudo netplan apply
 ```
-🧠 Crédits & Contexte
+## Crédits & Contexte
 
 Ce guide est la documentation de mon déploiement de Ubuntu Server pour mon Homelab où :
 
@@ -254,6 +239,9 @@ Le serveur n’avait pas d’accès Internet
 L'installation s'est faite via clé USB et .deb
 
 Problèmes rencontrés :
-
+- pas de connextion Wifi 
+- pas de paquets déja installés
 
 Résultat : connexion stable, accès SSH, reconnexion automatique
+
+## 📸-illustrations-à-ajouter
