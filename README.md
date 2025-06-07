@@ -194,6 +194,13 @@ ssh nom_utilisateur@ip_du_serveur
 | Afficher l'adresse IP       | ip a show wlan0             | Affiche l’adresse IP de l’interface wlan0        |
 | Trafic réseau en temps réel | sudo iftop -i wlan0         | Surveille le trafic réseau en direct             |
 
+J'ai aussi écrit un petit script bash pour se connecter au wifi manuellement, au lieu de reecrire toutes les commandes à la main.
+**Pour le lancer**
+```bash
+chmod +x WIFI-Manuel.sh
+./WIFI-Manuel.sh
+```
+![Script WIFI](UbuntuServer/WIFI-Manuel.sh).
 
 ## Fiabilisation
 ```bash
