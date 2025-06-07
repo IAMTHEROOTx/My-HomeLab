@@ -196,9 +196,9 @@ ssh nom_utilisateur@ip_du_serveur
 
 J'ai aussi écrit un petit script bash pour se connecter au wifi manuellement, au lieu de reecrire toutes les commandes à la main.
 
+(UbuntuServer/WIFI-Manuel.sh)
 **Pour le lancer**
 
-![Script WIFI](UbuntuServer/WIFI-Manuel.sh).
 ```bash
 chmod +x WIFI-Manuel.sh
 ./WIFI-Manuel.sh
