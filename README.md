@@ -7,7 +7,7 @@
 
 ## 📜 Sommaire
 
-- [Présentation du projet](#présentation--du--projet)
+- [Présentation du projet](#présentation-du-projet)
 - [Pré-requis](#pré-requis)
 - [Étapes détaillées](#étapes-détaillées)
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
@@ -21,13 +21,13 @@
 
 ---
 
-## 🧾 Présentation du projet
+## Présentation du projet
 
 Ce projet documente la configuration d’un **serveur Ubuntu sans interface graphique** qui doit se connecter en Wi-Fi **sans accès Internet initial**, pour ensuite être contrôlé à distance via **SSH**.
 
 ---
 
-## 📦 Pré-requis
+## Pré-requis
 
 - Ubuntu Server 24.04 (noble) ou supérieur
 - Une **clé USB** pour transférer des fichiers `.deb`
@@ -83,7 +83,7 @@ Changez de port USB ou changez de clé USB.
 ```bash
 cannot access archive: No such file or directory
 ```
-👉 Activer manuellement :
+Activer manuellement :
 ```bash
 lsblk
 sudo mkdir /mnt/usb
@@ -176,7 +176,7 @@ Connexion depuis un autre PC :
 ssh nom_utilisateur@ip_du_serveur
 ```
 
-## 🧰 Commandes utiles
+## Commandes utiles
 ```bash
 | Action                    | Commande                    | Description                                      |
 |---------------------------|-----------------------------|--------------------------------------------------|
@@ -244,4 +244,4 @@ Problèmes rencontrés :
 
 Résultat : connexion stable, accès SSH, reconnexion automatique
 
-## 📸-illustrations-à-ajouter
+## illustrations-à-ajouter
