@@ -8,6 +8,7 @@
 ## 📜 Sommaire
 
 - [Présentation du projet](#présentation-du-projet)
+- [Plan réseau de mon Homelab](#Plan-réseau-de-mon-Homelab)
 - [Pré-requis](#pré-requis)
 - [Étapes détaillées](#étapes-détaillées)
   - [1. Préparation réseau minimale](#1-préparation-réseau-minimale)
@@ -24,6 +25,11 @@
 ## Présentation du projet
 
 Ce projet documente la configuration d’un **serveur Ubuntu sans interface graphique** qui doit se connecter en Wi-Fi **sans accès Internet initial**, pour ensuite être contrôlé à distance via **SSH**.
+
+---
+
+## Plan réseau de mon Homelab
+![Mise en place d’un serveur Uunbtu sans fil avec accès SSH](3a7414ad-3a04-4fa8-87bf-85f8f8ef55c8.png)
 
 ---
 
